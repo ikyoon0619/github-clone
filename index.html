@@ -65,11 +65,16 @@
           </div>
           <div class="sign-group">
             <div class="btn-group">
-              <a href="" class="btn sign-in">Sign in</a>
-              <a href="" class="btn btn--primary sign-up">Sign up</a>
+              <a href="#" class="btn sign-in">Sign in</a>
+              <a href="#" class="btn btn--primary sign-up">Sign up</a>
             </div>
             <form action="" id="search-form" method="POST">
-              <input type="text" id="search" class="input--text" />
+              <input
+                type="text"
+                id="search"
+                class="input--text"
+                placeholder="Search GitHub"
+              />
               <input type="submit" value="Sumbit" />
             </form>
             <ul class="sub-menu">
@@ -193,6 +198,43 @@
           </div>
         </div>
       </section>
+      <!-- Where is -->
+      <section class="section section--where-is">
+        <div class="inner">
+          <div class="summary">
+            <div class="summary__title">Where is GitHub?</div>
+            <div class="summary__description">
+              GitHub is where people build software. More than 18 million people
+              use GitHub to discover, fork, and contribute to over 48 million
+              projects.
+            </div>
+          </div>
+          <div id="map"></div>
+        </div>
+      </section>
     </div>
+    <script>
+      function initMap() {
+        const myLatLng = {
+          lat: 37.782293,
+          lng: -122.39124,
+        };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 18,
+        });
+        const marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: "GitHub",
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>
