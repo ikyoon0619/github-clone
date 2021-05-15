@@ -1,6 +1,6 @@
 # GitHub main page 
 Gitbut 사이트의 메인 페이지를 반응형으로 작업.
-##Example
+## Example
 [Github Responsive DEMO](https://keen-morse-7e4628.netlify.app)
 
 ## Video link
